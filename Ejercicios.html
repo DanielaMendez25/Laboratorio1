@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones Matemáticas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .resu {
+        font-size: 150px;
+        color: #075181;
+        font-weight: bold;
+      }
+
+      body {
+    background-color: #94c1f5;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: black;
+  }
+
+  
+  script {
+
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+  }
+  
+  h1 {
+    color: #075181; 
+  }
+
+  h3 {
+    color: #000000; 
+}
+
+  
+  img {
+    border-radius: 5px;
+    margin-top: 10px;
+    
+  }
+  
+
+  .resul{
+    font-size: 20px;
+    color: #075181;
+    font-weight: bold;
+  }
+
+  </style>
+</head>
+<body>
+<!-- Ejercicio 1-->
+  <h2>EJERCICIO 1</h2>
+  <h3 class="text-center">Operaciones Matemáticas</h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="img/suma.png" alt="Suma" class="imagen img-fluid" width="200">
+      </div>
+      <div class="col-md-3">
+        <img src="img/resta.png" alt="Resta" class="imagen img-fluid" width="200">
+      </div>
+      <div class="col-md-3">
+        <img src="img/multi.png" alt="Multiplicación" class="imagen img-fluid" width="200">
+      </div>
+      <div class="col-md-3">
+        <img src="img/division.png" alt="División" class="imagen img-fluid" width="200">
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-3">
+        <p class="text-center"><strong>Resultado de la Suma:</strong> <span id="suma"></span></p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-center"><strong>Resultado de la Resta:</strong> <span id="resta"></span></p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-center"><strong>Resultado de la Multiplicación:</strong> <span id="multiplicacion"></span></p>
+      </div>
+      <div class="col-md-3">
+        <p class="text-center"><strong>Resultado de la División:</strong> <span id="division"></span></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+
+    var suma, resta, multiplicacion, division;
+    var numeroEntero = prompt('Ingrese un número entero:', '');
+    var numeroDecimal = prompt('Ingrese un número decimal:', '');
+    var numDecimal = parseFloat(numeroDecimal);
+
+
+    suma = parseFloat(numeroEntero) + numDecimal;
+    resta = parseFloat(numeroEntero) - numDecimal;
+    multiplicacion = parseFloat(numeroEntero) * numDecimal;
+    division = parseFloat(numeroEntero) / numDecimal;
+
+    console.log("Resultado de la Suma:", suma);
+    console.log("Resultado de la Resta:", resta);
+    console.log("Resultado de la Multiplicación:", multiplicacion);
+    console.log("Resultado de la División:", division);
+
+
+    document.getElementById("suma").innerText = suma;
+    document.getElementById("resta").innerText = resta;
+    document.getElementById("multiplicacion").innerText = multiplicacion;
+    document.getElementById("division").innerText = division;
+  </script>
+<hr size="8px" color= #e00b97> 
+<!-- Ejercicio 2-->
+<h2>EJERCICIO 2</h2>
+<center> <img src="img/carnet.png"  width="200"></center>
+<script>
+
+  var nombre = "Daniela Abigail Méndez";
+  var carnet = "SMSS069122";
+
+
+  var informacion = nombre + " - " + carnet;
+
+  document.write("<h1><p>Información del estudiante:</h1><h3> " + informacion+ "</h3></p>");
+  console.log("Información del estudiante:", informacion);
+</script>
+<hr size="8px" color="#e00b97">
+<!-- Ejercicio 3 -->
+<h2>EJERCICIO 3</h2>
+<p id="resul" class="resu"></p>
+<script>
+  let numero = 25;
+  let cadenaResultado = numero.toString();
+  console.log(cadenaResultado);
+  let resultadoElemento = document.getElementById("resul");
+  resultadoElemento.innerText = cadenaResultado;
+</script>
+<hr size="8px" color=#e00b97>
+<!-- Ejercicio 4 -->
+<h2>EJERCICIO 4</h2>
+<p id="resu" class="resu"></p>
+<img src="img/cadena.png" width="200">
+<script>
+  let cNumero = "25";
+  let numResultado = parseInt(cNumero);
+  let resultadoElement = document.getElementById("resu"); // Aquí está declarando nuevamente la misma variable
+  resultadoElement.innerText = "El número es: " + numResultado;
+  console.log("El número es:", numResultado);
+</script>
+<hr size="8px" color="#e00b97">
+<!-- Ejercicio 5-->
+<h2>EJERCICIO 5</h2>
+<div style="background-color: #94c1f5; padding: 20px; text-align: center; 
+color: black;">
+   
+<h1 class="text-center">Cálculo de peso</h1>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-3">
+    <div class="resul">
+      <p id="resultadoTierra"></p>
+      <img src="img/planeta.png" alt="Planeta" class="imagen img-fluid" width="200">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="resul">
+      <p id="resultadoLuna"></p>
+      <img src="img/luna.png" alt="Luna" class="imagen img-fluid" width="200">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="resul">
+      <p id="resultadoMarte"></p>
+      <img src="img/marte.png" alt="Marte" class="imagen img-fluid" width="200">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="resul">
+      <p id="resultadoMercurio"></p>
+      <img src="img/mercurio.png" alt="Mercurio" class="imagen img-fluid" width="200">
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+
+let masa = 50; 
+
+const gravedadTierra = 9.8;
+const gravedadLuna = 1.625; 
+const gravedadMarte = 3.72076;
+const gravedadMercurio = 3.7; 
+
+
+let pesoTierra = masa * gravedadTierra;
+let pesoLuna = masa * gravedadLuna;
+let pesoMarte = masa * gravedadMarte;
+let pesoMercurio = masa * gravedadMercurio;
+
+let resultadoTierraElement = document.getElementById("resultadoTierra");
+let resultadoLunaElement = document.getElementById("resultadoLuna");
+let resultadoMarteElement = document.getElementById("resultadoMarte");
+let resultadoMercurioElement = document.getElementById("resultadoMercurio");
+
+console.log("Peso en la Tierra:", pesoTierra.toFixed(2), "N");
+console.log("Peso en la Luna:", pesoLuna.toFixed(2), "N");
+console.log("Peso en Marte:", pesoMarte.toFixed(2), "N");
+console.log("Peso en Mercurio:", pesoMercurio.toFixed(2), "N");
+
+
+resultadoTierraElement.innerText = "Peso en la Tierra: " + pesoTierra.toFixed(2) + " N";
+resultadoLunaElement.innerText = "Peso en la Luna: " + pesoLuna.toFixed(2) + " N";
+resultadoMarteElement.innerText = "Peso en Marte: " + pesoMarte.toFixed(2) + " N";
+resultadoMercurioElement.innerText = "Peso en Mercurio: " + pesoMercurio.toFixed(2) + " N";
+</script>
+</body>
+</html>
